@@ -30,7 +30,7 @@ func main() {
 			Aliases: []string{"ls"},
 			Usage:   "list application, environment and how many versions, which is running",
 			Action: func(c *cli.Context) {
-				eb := elasticbeanstalk.New(&aws.Config{Region: c.String("region")})
+				eb := elasticbeanstalk.New(&aws.Config{Region: c.GlobalString("region")})
 				resp, err := eb.DescribeApplications(nil)
 
 				if err != nil {
