@@ -19,6 +19,7 @@ A tool to delete old AWS Elastic Beanstalk Application Versions (and their sourc
 3. Run `godep restore`
 4. Run `go install`
 5. Execute `ebclean help` in your terminal and follow the instruction there
+6. `ebclean clean <beanstalk_application_name_>` will inspect, print out results and automatically clean up all old versions of the specified application 
 
 # Known Limitations
 
